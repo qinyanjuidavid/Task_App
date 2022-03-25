@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:task_app/home_page.dart';
+import 'package:get/get.dart';
 
 class VideoInfo extends StatefulWidget {
   const VideoInfo({Key? key}) : super(key: key);
@@ -8,32 +10,32 @@ class VideoInfo extends StatefulWidget {
 }
 
 class _VideoInfoState extends State<VideoInfo> {
-  video_info=[
-  {
-    "title": "Squat and  Walk",
-    "time": "45 seconds",
-    "thumbnail": "embed/img1.jpg",
-    "videoUrl": "https://www.youtube.com/watch?v=svQOxQde0bg"
-  },
-  {
-    "title": "Squat and  Walk",
-    "time": "45 seconds",
-    "thumbnail": "embed/img1.jpg",
-    "videoUrl": "https://www.youtube.com/watch?v=svQOxQde0bg"
-  },
-  {
-    "title": "Squat and  Walk",
-    "time": "45 seconds",
-    "thumbnail": "embed/img1.jpg",
-    "videoUrl": "https://www.youtube.com/watch?v=svQOxQde0bg"
-  },
-  {
-    "title": "Squat and  Walk",
-    "time": "45 seconds",
-    "thumbnail": "embed/img1.jpg",
-    "videoUrl": "https://www.youtube.com/watch?v=svQOxQde0bg"
-  }
-];
+  List video_info = [
+    {
+      "title": "Squat and  Walk",
+      "time": "45 seconds",
+      "thumbnail": "embed/img1.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=svQOxQde0bg"
+    },
+    {
+      "title": "Squat and  Walk",
+      "time": "45 seconds",
+      "thumbnail": "embed/img1.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=svQOxQde0bg"
+    },
+    {
+      "title": "Squat and  Walk",
+      "time": "45 seconds",
+      "thumbnail": "embed/img1.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=svQOxQde0bg"
+    },
+    {
+      "title": "Squat and  Walk",
+      "time": "45 seconds",
+      "thumbnail": "embed/img1.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=svQOxQde0bg"
+    }
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -68,10 +70,15 @@ class _VideoInfoState extends State<VideoInfo> {
                           left: 0,
                           top: 15,
                         ),
-                        child: Icon(
-                          Icons.arrow_back_ios,
-                          size: 25,
-                          color: Colors.white,
+                        child: InkWell(
+                          onTap: () {
+                            Get.back();
+                          },
+                          child: Icon(
+                            Icons.arrow_back_ios,
+                            size: 25,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                       Expanded(
